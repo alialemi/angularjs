@@ -11,6 +11,7 @@ app.controller("AppCtrl", function ($scope, $element)
 
 	$scope.movetypes 	= ['Finisher', 'Offensive Move', 'Defensive Move'];
 	$scope.movetype 	= $scope.movetypes[0];
+	$scope.name = $scope.movetype;
 })
 
 .directive("character", function ()
@@ -18,11 +19,11 @@ app.controller("AppCtrl", function ($scope, $element)
 	return {
 		restrict: 'E',
 		scope: {
-			name: "@",
-			image: "@",
-			movetype: "=",
-			useMove: '&'
-		},
+		 	name: "@",
+		 	image: "@",
+		 	movetype: "=",
+		 	useMove: '&'
+		 },
 		templateUrl: 'partials/shield_isolate.html',
 		controller: 'AppCtrl'
 	}
