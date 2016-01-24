@@ -22,4 +22,8 @@ app.service("ravensService", function ($http, $q)
 	{
 		$scope.players = data.data;
 	});
+
+	$scope.goToNextPage = function (data) {
+		$scope.players = data;
+	}
 })
